@@ -22,10 +22,8 @@
         function create(){
 
             // query to insert record
-            $query = "INSERT INTO 
-                " . $this->table_name . "
-            SET 
-                name=:name, price=:price, description=:description, created=:created";
+            $query = "INSERT INTO " . $this->table_name . " SET 
+            name=:name, price=:price, description=:description, created=:created";
 
             // prepare query
             $stmt = $this->conn->prepare($query);
@@ -57,8 +55,7 @@
         function readAll(){
 
             // select all query
-            $query = "SELECT 
-                id, name, description, price, created 
+            $query = "SELECT id, name, description, price, created 
             FROM 
                 " . $this->table_name . "
             ORDER BY 
